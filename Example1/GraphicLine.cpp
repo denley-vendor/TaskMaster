@@ -1,16 +1,13 @@
-// Dependencies --------------------------------------------------
 #include "GraphicLine.h"
 
-// END Dependencies ----------------------------------------------
-
-
 GraphicLine::GraphicLine(const CPoint& p1, const CPoint& p2)
-: itsP1(p1)
-, itsP2(p2)
-{}
+  : itsP1(p1), itsP2(p2)
+{
+}
 
 GraphicLine::~GraphicLine()
-{}
+{
+}
 
 void GraphicLine::Draw(CClientDC& aDC) const
 {

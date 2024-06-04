@@ -1,22 +1,7 @@
-// Interface Dependencies -------------------------------------------
 #ifndef GraphicLine_h
 #define GraphicLine_h
 
 #include "GraphicObject.h"
-// END Interface Dependencies ---------------------------------------
-
-// ------------------------------------------------------------------
-//
-//  Name:
-//    GraphicLine
-//
-//  Description
-//    This class implements a line that can be drawn into 
-//    a CClientDC
-//
-//  Notes
-// 
-// ------------------------------------------------------------------
 
 class GraphicLine : public GraphicObject
 {
