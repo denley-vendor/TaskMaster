@@ -1,4 +1,3 @@
- // Dependencies ------------------------------------------------------
 #include "stdafx.h"
 #include "LineApplication.h"
 
@@ -8,8 +7,6 @@
 #include "GraphicFactory.h"
 
 extern GraphicFactory* GgraphicFactoryProto;
-// END Dependencies --------------------------------------------------
-
 
 IMPLEMENT_DYNCREATE(LineApplicationView, CView)
 
@@ -19,12 +16,10 @@ BEGIN_MESSAGE_MAP(LineApplicationView, CView)
   ON_WM_MOUSEMOVE()
 END_MESSAGE_MAP()
 
-
 LineApplicationView::LineApplicationView()
-: itsGraphicFactory(GgraphicFactoryProto->Clone())
+  : itsGraphicFactory(GgraphicFactoryProto->Clone())
 {
   itsBluePen = new CPen(0,1,RGB(255,255,0));
-    // when the pen is drawn in XOR mode it will be blue
 }
 
 LineApplicationView::~LineApplicationView()
@@ -36,7 +31,6 @@ LineApplicationView::~LineApplicationView()
 
 void LineApplicationView::DeleteObjects()
 {
-  // delete the object stored in the vector
   while(itsObjects.size() > 0)
   {
     GraphicObject* anObject = itsObjects.front();
@@ -45,18 +39,6 @@ void LineApplicationView::DeleteObjects()
   }
 }
 
-
-// -------------------------------------------------------------------
-//
-//  Name
-//    void LineApplicationView::OnDraw(CDC* pDC)
-//
-//  Description
-//    This is where the items are drawn upon a paint event.
-//
-//  Notes:
-//  
-// -------------------------------------------------------------------  
 void LineApplicationView::OnDraw(CDC* aDC)
 {
   std::vector<GraphicObject*, std::allocator<GraphicObject*> >::iterator index;
@@ -67,10 +49,9 @@ void LineApplicationView::OnDraw(CDC* aDC)
   }
 }
 
-
 LineApplicationDoc* LineApplicationView::GetDocument() 
 {
-    return static_cast<LineApplicationDoc*> (m_pDocument);
+  return static_cast<LineApplicationDoc*> (m_pDocument);
 }
 
 void LineApplicationView::OnLButtonUp(UINT nFlags, CPoint point)
@@ -84,8 +65,6 @@ void LineApplicationView::OnLButtonUp(UINT nFlags, CPoint point)
     Line* newLine = new Line(itsFirstPoint, itsSecondPoint);
     document->AddLine(newLine);
   }
-
-  return;
 }
 
 void LineApplicationView::OnLButtonDown(UINT nFlags, CPoint point)
@@ -118,8 +97,6 @@ void LineApplicationView::OnMouseMove(UINT nFlags, CPoint point)
     dc.SetROP2(previousROP);
     dc.SelectObject(currentPen);
   }
-
-  return;
 }
 
 void LineApplicationView::OnUpdate(CView* sender, LPARAM lHint, 
@@ -139,8 +116,6 @@ void LineApplicationView::OnUpdate(CView* sender, LPARAM lHint,
   {
     CView::OnUpdate(sender, lHint, pHint);
   }
-
-  return;
 }
 
 void LineApplicationView::OnInitialUpdate()

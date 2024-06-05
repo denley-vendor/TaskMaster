@@ -1,25 +1,8 @@
-//Interface Dependencies ----------------------------------------------
-
 #include "stdafx.h"
 #include <vector>
 #include <xmemory>
 
 class Line;
-// END Interface Dependencies -----------------------------------------
-
-// --------------------------------------------------------------------
-//
-//  Name
-//    LineApplicationDoc
-//
-//  Description
-//    This class is responsible for saving the actual lines out 
-//    to the disk.
-//
-//  Notes:
-//
-// --------------------------------------------------------------------
-
 class LineApplicationDoc : public CDocument
 {
   public:

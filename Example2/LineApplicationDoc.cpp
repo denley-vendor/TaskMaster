@@ -1,15 +1,10 @@
-
-// Dependencies ------------------------------------------------------
 #include "LineApplicationDoc.h"
 #include "Line.h"
-
-// END Dependencies --------------------------------------------------
 
 IMPLEMENT_DYNCREATE(LineApplicationDoc, CDocument)
 
 BEGIN_MESSAGE_MAP(LineApplicationDoc, CDocument)
 END_MESSAGE_MAP()
-
 
 LineApplicationDoc::LineApplicationDoc()
 {
@@ -19,13 +14,11 @@ LineApplicationDoc::LineApplicationDoc()
 LineApplicationDoc::~LineApplicationDoc()
 {
   ClearArray();
-  return;
 }
 
 void LineApplicationDoc::DeleteContents()
 {
   ClearArray();
-  return;
 }
 
 void LineApplicationDoc::ClearArray()
@@ -40,7 +33,6 @@ void LineApplicationDoc::ClearArray()
     itsLines.RemoveAll();
   }
 }
-
 
 void LineApplicationDoc::Serialize(CArchive& anArchive)
 {
@@ -65,4 +57,3 @@ void LineApplicationDoc::GetLines(std::vector<Line*, std::allocator<Line*> >& li
     }
   }
 }
-

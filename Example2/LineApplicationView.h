@@ -1,25 +1,9 @@
-// Interface Dependencies -------------------------------------------
 #include "stdafx.h"
 #include <vector>
 #include <xmemory>
 #include "GraphicObject.h"
 
 class GraphicFactory;
-// END Interface Dependencies ---------------------------------------
-
-// ------------------------------------------------------------------
-//
-//  Name
-//    LineApplicationView
-//
-//  Description
-//    Graphical view of the lines that are drawn by the application
-//
-//  Notes:
-//    Create from serialization only
-//
-// ------------------------------------------------------------------
-
 class LineApplicationView : public CView
 {
   public:

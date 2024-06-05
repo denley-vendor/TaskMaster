@@ -1,23 +1,7 @@
-// Interface Dependencies ---------------------------------------------
 #ifndef Line_h
 #define Line_h
 
 #include <afxwin.h>
-
-// END Interface Dependencies -----------------------------------------
-
-// --------------------------------------------------------------------
-//
-//  Name
-//    Line
-//
-//  Description
-//    This is a class that describes a line and can be 
-//    saved by the document.
-//
-//  Notes:
-//
-// --------------------------------------------------------------------
 
 class Line : public CObject
 {

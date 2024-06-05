@@ -1,10 +1,7 @@
-// Dependencies -------------------------------------------------------
 #include "stdafx.h"
 #include "LineApplication.h"
 
 #include "MainFrm.h"
-// END Dependencies ---------------------------------------------------
-
 
 IMPLEMENT_DYNCREATE(MainFrame, CFrameWnd)
 

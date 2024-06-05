@@ -1,22 +1,8 @@
-// Interface Dependencies ---------------------------------------------
 #ifndef LineApplicationApp_h
 #define LineApplicationApp_h
 
 #include "stdafx.h"
-#include "resource.h"       // main symbols
-// END Interface Dependencies -----------------------------------------
-
-// --------------------------------------------------------------------
-//
-//  Name
-//    LineApplicationApp
-//
-//  Description
-//    This is the main application class.
-//
-//  Notes:
-//  
-// --------------------------------------------------------------------
+#include "resource.h"       
 
 class LineApplicationApp : public CWinApp
 {

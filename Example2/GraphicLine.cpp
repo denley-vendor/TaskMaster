@@ -1,15 +1,12 @@
-// Dependencies --------------------------------------------------
 #include "GraphicLine.h"
 
-// END Dependencies ----------------------------------------------
-
-
-GraphicLine::GraphicLine(const Line& aLine)
-: itsLine(aLine)
-{}
+GraphicLine::GraphicLine(const Line& aLine) : itsLine(aLine)
+{
+}
 
 GraphicLine::~GraphicLine()
-{}
+{
+}
 
 void GraphicLine::Draw(CDC& aDC) const
 {
